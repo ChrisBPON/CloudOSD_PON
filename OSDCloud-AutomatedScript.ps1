@@ -149,8 +149,5 @@ $Abort=$True
 Write-Host "Welcome to PowerON OSD Cloud!"
 Start-Sleep 1
 Write-Warning "Press ESC within 10 seconds to customise OSDCloud or else default script will run"
-Write-Host ""
-Write-Host ""
-Write-Host ""
-Write-Host ""
-Start-Countdown -ProgressBar -Seconds 10
+
+Start-Countdown -Seconds 10 -Clear
