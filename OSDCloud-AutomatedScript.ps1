@@ -1,3 +1,16 @@
+Set-ExecutionPolicy Bypass -Force
+
+$Serial = Get-WMIObject Win32_Bios | Select-Object SerialNumber | Out-String
+$Serial = $Serial.Remove(0,28)
+$Serial
+
+Install-Script Get-WindowsAutopilotInfo -Force
+Get-WindowsAutopilotInfo -GroupTag "SmarT User" -OutputFile "X:\Autopilot-$Serial.csv"
+
+
+net use Z: \\10.0.5.2\Cats_AP /User:Administrator
+copy X:\Autopilot-$Serial.csv Z:
+
 ## Start PONOSD with default values for internal devices
 
 function Start-PONOSD {
