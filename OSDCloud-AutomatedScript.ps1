@@ -6,7 +6,7 @@ $Serial
 
 net use Z: \\192.168.1.167\Cats_AP /User:Administrator
 cd Z:
-Register-PSRepository -Name Local -SourceLocation Z:\Packages\p -InstallationPolicy Trusted
+Register-PSRepository -Name Local -SourceLocation Z:\Packages -InstallationPolicy Trusted
 Find-Module -Repository Local
 Install-Module -Name Get-WindowsAutopilotInfo
 .\Get-WindowsAutopilotInfo.ps1
