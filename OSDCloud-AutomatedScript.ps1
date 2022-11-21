@@ -5,7 +5,8 @@ $Serial = $Serial.Remove(0,28)
 $Serial
 
 net use Z: \\192.168.1.167\Cats_AP /User:Administrator
-Z:\Get-WindowsAutopilotInfo.ps1 -GroupTag "SmarT User" -OutputFile X:\Autopilot-$Serial.csv
+cd Z:
+.\Get-WindowsAutopilotInfo.ps1
 copy X:\Autopilot-$Serial.csv Z:
 
 ## Added below to pause the script so I can see the error
