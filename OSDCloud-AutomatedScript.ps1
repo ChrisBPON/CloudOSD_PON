@@ -1,19 +1,3 @@
-Set-ExecutionPolicy Bypass -Force
-
-$Serial = Get-WMIObject Win32_Bios | Select-Object SerialNumber | Out-String
-$Serial = $Serial.Remove(0,28)
-$Serial
-
-net use Z: \\192.168.1.167\Cats_AP /User:Administrator
-cd Z:
-Register-PSRepository -Name Local -SourceLocation Z:\Packages -InstallationPolicy Trusted
-Find-Module -Repository Local
-Install-Script -Name Get-WindowsAutopilotInfo -PSRepository Local
-.\Get-WindowsAutopilotInfo.ps1
-copy X:\Autopilot-$Serial.csv Z:
-
-## Added below to pause the script so I can see the error
-Sleep -Seconds 30
 ## Start PONOSD with default values for internal devices
 
 function Start-PONOSD {
