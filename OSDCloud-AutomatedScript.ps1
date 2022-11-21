@@ -4,7 +4,7 @@ $Serial = Get-WMIObject Win32_Bios | Select-Object SerialNumber | Out-String
 $Serial = $Serial.Remove(0,28)
 $Serial
 
-net use Z: \\10.0.5.2\Cats_AP /User:Administrator
+net use Z: \\192.168.1.167\Cats_AP /User:Administrator
 Z:\Get-WindowsAutopilotInfo.ps1 -GroupTag "SmarT User" -OutputFile X:\Autopilot-$Serial.csv
 copy X:\Autopilot-$Serial.csv Z:
 
