@@ -9,7 +9,7 @@ Z:\Get-WindowsAutopilotInfo.ps1 -GroupTag "SmarT User" -OutputFile X:\Autopilot-
 copy X:\Autopilot-$Serial.csv Z:
 
 ## Added below to pause the script so I can see the error
-Console.ReadKey().Key != ConsoleKey.Enter
+Sleep -Seconds 30
 ## Start PONOSD with default values for internal devices
 
 function Start-PONOSD {
