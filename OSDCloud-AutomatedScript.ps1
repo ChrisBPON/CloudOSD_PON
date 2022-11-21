@@ -8,6 +8,8 @@ net use Z: \\10.0.5.2\Cats_AP /User:Administrator
 Z:\Get-WindowsAutopilotInfo.ps1 -GroupTag "SmarT User" -OutputFile X:\Autopilot-$Serial.csv
 copy X:\Autopilot-$Serial.csv Z:
 
+## Added below to pause the script so I can see the error
+Console.ReadKey().Key != ConsoleKey.Enter
 ## Start PONOSD with default values for internal devices
 
 function Start-PONOSD {
