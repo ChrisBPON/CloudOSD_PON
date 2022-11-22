@@ -152,4 +152,9 @@ Write-Warning "Press ESC within 10 seconds to customise OSDCloud or else default
 Write-Host "`n"
 Write-Host "`n"
 Write-Host "`n"
-Start-Countdown -ProgressBar -Seconds 10 -Clear
+
+Start-OSDCloudGUI
+
+## Use below for automation
+## Start-Countdown -ProgressBar -Seconds 10 -Clear
+
