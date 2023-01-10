@@ -153,7 +153,7 @@ Write-Host "`n"
 Write-Host "`n"
 Write-Host "`n"
 
-Start-OSDCloudGUI
+Start-PONOSD
 
 ## Use below for automation
 ## Start-Countdown -ProgressBar -Seconds 10 -Clear
