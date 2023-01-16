@@ -22,6 +22,8 @@ Import-Module OSD -Force
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
 
+Start-Sleep -Seconds 10
+
 #Restart from WinPE
 Write-Host  -ForegroundColor Cyan "Restarting in 10 seconds!"
 Start-Sleep -Seconds 10
