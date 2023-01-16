@@ -2,7 +2,7 @@
 
 function Start-PONOSD {
 
-Write-Host  -ForegroundColor Cyan "Starting PowerONPlatform's Custom OSDCloud Script..."
+Write-Host  -ForegroundColor Cyan "Starting PowerONPlatform's Custom OSDCloud Script for Cats Protection..."
 Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
@@ -20,7 +20,7 @@ Import-Module OSD -Force
 
 #Start OSDCloud ZTI
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
-Start-OSDCloud -OSName "Windows 11 22H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
+Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
 
 #Restart from WinPE
 Write-Host  -ForegroundColor Cyan "Restarting in 10 seconds!"
