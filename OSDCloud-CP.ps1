@@ -12,4 +12,4 @@ Write-Host "Build complete"
 #Restart from WinPE
 Write-Host  -ForegroundColor Cyan "Restarting in 5 seconds!"
 Start-Sleep -Seconds 5
-wpeutil reboot
+wpeutil shutdown
