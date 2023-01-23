@@ -25,8 +25,6 @@ net use * \\10.0.5.2\Cats_AP
 
 Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
-Start-Sleep -Seconds 10
-
 #Restart from WinPE
 Write-Host  -ForegroundColor Cyan "Restarting in 10 seconds!"
 Start-Sleep -Seconds 10
