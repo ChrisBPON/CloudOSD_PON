@@ -2,7 +2,7 @@
 
 function Start-PONOSD {
 
-Write-Host  -ForegroundColor Cyan "Starting PowerONPlatform's Custom OSDCloud Script for Cats Protection..."
+Write-Host  -ForegroundColor Cyan "Starting PowerONPlatform's Custom OSDCloud Script..."
 Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
@@ -20,7 +20,10 @@ Import-Module OSD -Force
 
 #Start OSDCloud ZTI
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
-Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
+
+net use * \\10.0.5.2\Cats_AP
+
+Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
 Start-Sleep -Seconds 10
 
