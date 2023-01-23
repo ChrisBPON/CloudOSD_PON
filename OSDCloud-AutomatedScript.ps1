@@ -26,7 +26,7 @@ net use * \\10.0.5.2\Cats_AP
 Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
 #Restart from WinPE
-Write-Host -ForegroundColor Cyan "Build complete! 
+Write-Host -ForegroundColor Cyan "Build complete!"
 Write-Host  -ForegroundColor Cyan "Shutting down in 5 seconds!"
 Start-Sleep -Seconds 5
 wpeutil shutdown
