@@ -3,7 +3,6 @@
 function Start-PONOSD {
 
 Write-Host  -ForegroundColor Cyan "Starting PowerONPlatform's Custom OSDCloud Script..."
-Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
