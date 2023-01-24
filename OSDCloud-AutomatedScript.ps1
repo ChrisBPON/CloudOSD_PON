@@ -20,7 +20,9 @@ Import-Module OSD -Force
 #Start OSDCloud ZTI
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 
-net use * \\10.0.5.2\Cats_AP
+
+New-PSDrive -Name Z -Root //10.0.5.2/Cats_AP -PSProvider FileSystem -Credential everyone
+## net use * \\10.0.5.2\Cats_AP
 
 Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
