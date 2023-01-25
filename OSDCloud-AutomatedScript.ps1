@@ -22,7 +22,7 @@ Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 
 
 
-net use * \\10.0.5.2\Cats_AP /user everyone /password
+net use * \\10.0.5.2\Cats_AP /user:everyone /password
 
 Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
