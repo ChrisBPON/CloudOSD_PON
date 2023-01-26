@@ -32,7 +32,7 @@ Write-Host -ForegroundColor Cyan "Build complete!"
 #Add reg key to prevent TPM attestation fail
 
 Write-Host -ForegroundColor Cyan "Adding registry key for TPM attestation fix"
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OOBE /v SetupDisplayedUela /t REG_DWORD /d 00000001 /f
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OOBE /v SetupDisplayedEula /t REG_DWORD /d 00000001 /f
 Write-Host -ForegroundColor Cyan "Reg key added!"
 
 Write-Host -ForegroundColor Cyan "Shutting down in 5 seconds!"
