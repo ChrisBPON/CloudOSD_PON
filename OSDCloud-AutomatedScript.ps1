@@ -20,11 +20,7 @@ Import-Module OSD -Force
 #Start OSDCloud ZTI
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 
-
-
-net use * \\10.0.5.2\Cats_AP /user:everyone
-
-Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
+Start-OSDCloud -OSName "Windows 11 22H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
 
 #Restart from WinPE
 Write-Host -ForegroundColor Cyan "Build complete!"
@@ -165,8 +161,6 @@ Write-Host "`n"
 Write-Host "`n"
 Write-Host "`n"
 
-Start-PONOSD
-
 ## Use below for automation
-## Start-Countdown -ProgressBar -Seconds 10 -Clear
+Start-Countdown -ProgressBar -Seconds 10 -Clear
 
