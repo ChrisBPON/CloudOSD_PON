@@ -20,10 +20,7 @@ Import-Module OSD -Force
 #Start OSDCloud ZTI
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 
-Start-OSDCloud -OSName "Windows 11 22H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
-
-#Restart from WinPE
-Write-Host -ForegroundColor Cyan "Build complete!"
+Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
 
 #Add reg key to prevent TPM attestation fail
 
@@ -31,10 +28,10 @@ Write-Host -ForegroundColor Cyan "Adding registry key for TPM attestation fix"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OOBE /v SetupDisplayedEula /t REG_DWORD /d 00000001 /f
 Write-Host -ForegroundColor Cyan "Reg key added!"
 
+Write-Host -ForegroundColor Green "Build complete!"
 Write-Host -ForegroundColor Cyan "Shutting down in 5 seconds!"
 Start-Sleep -Seconds 5
 wpeutil shutdown
-
 
 }
 
