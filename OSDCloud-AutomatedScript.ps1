@@ -10,9 +10,9 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Set-DisRes 1600
 }
 
-#Make sure I have the latest OSD Content
-Write-Host  -ForegroundColor Cyan "Updating the new OSD PowerShell Module"
-Install-Module OSD -Force
+#Make sure I have the latest OSD Content -- REMOVED TO SPEED UP THE BUILD TIME
+## Write-Host  -ForegroundColor Cyan "Updating the new OSD PowerShell Module"
+## Install-Module OSD -Force
 
 Write-Host  -ForegroundColor Cyan "Importing the new OSD PowerShell Module"
 Import-Module OSD -Force
