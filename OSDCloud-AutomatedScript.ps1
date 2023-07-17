@@ -19,12 +19,12 @@ Import-Module OSD -Force
 
 #Use Share to install Windows 10 21H2
 net use * \\10.0.5.2\Cats_AP /user:everyone
-Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
+Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI -OSEdition Enterprise
 
 #Start OSDCloud ZTI
 ## Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
 
-Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
+## Start-OSDCloud -OSName "Windows 10 21H2 x64" -OSEdition Enterprise -OSLanguage en-GB -Screenshot -ZTI -SkipAutopilot
 
 #Add reg key to prevent TPM attestation fail
 
