@@ -19,7 +19,7 @@ Import-Module OSD -Force
 
 #Use Share to install Windows 10 21H2
 net use * \\10.0.5.2\Cats_AP /user:everyone
-Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI -OSEdition Enterprise
+Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
 #Start OSDCloud ZTI
 ## Write-Host  -ForegroundColor Cyan "Start OSDCloud with default Parameters"
