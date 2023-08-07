@@ -18,7 +18,7 @@ Write-Host  -ForegroundColor Cyan "Importing the new OSD PowerShell Module"
 Import-Module OSD -Force
 
 #Use Share to install Windows 10 21H2
-net use * \\10.0.5.2\Cats_AP /user:everyone
+net use * \\10.0.5.2\OSDCloud /user:everyone
 Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
 
 #Start OSDCloud ZTI
