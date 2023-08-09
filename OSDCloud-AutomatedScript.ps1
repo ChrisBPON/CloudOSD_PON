@@ -24,6 +24,14 @@ function Start-BuildSelection {
         {
             Write-Host "Starting OSDCloud GUI"
             Start-OSDCloudGUI
+            Write-Host -ForegroundColor Green "Build complete!"
+
+            ## Fix TPM Attestation issue seen before during Autopilot
+            Start-TPMAttestationFix
+
+            Write-Host -ForegroundColor Cyan "Shutting down in 3 seconds!"
+            Start-Sleep -Seconds 3
+            wpeutil shutdown
         }
     else
         {
@@ -54,7 +62,7 @@ function Start-OSDInternal {
 function Start-OSDWIM {
 
     ## Connect to the shared location for WIM files
-    net use * \\10.0.5.2\OSDCloud /user:everyone
+    net use * \\192.168.1.167\OSDCloud /user:everyone
 
     ## Starts OSDCloud with the parameters to search for WIM files, Skip adding Autopilot profile JSON, Skip ODT, and Zero Touch Installation (No prompts throughout build process)
     Start-OSDCloud -FindImageFile -SkipAutopilot -SkipODT -ZTI
