@@ -1,6 +1,13 @@
 ## Amend this for internal build script e.g. when newer feature update is released - Might be a way to automate pulling through the latest version
 $WindowsOSVersion = "Windows 10 21H2 x64"
 
+function Start-UpdateOSD {
+
+Write-Host "Updating OSD"
+Install-Module OSD -Force
+Import-Module OSD -Force
+
+}
 
 function Start-BuildSelection {
     Write-Host "Which build would you like to run?"
@@ -85,5 +92,6 @@ function Start-TPMAttestationFix {
     Write-Host -ForegroundColor Cyan "Reg key added!"
 }
 
+Start-UpdateOSD
 Write-Host "PowerON Automated Building Process V1.0" -ForegroundColor Yellow
 Start-BuildSelection
