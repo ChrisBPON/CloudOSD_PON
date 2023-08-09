@@ -8,19 +8,19 @@ function Start-BuildSelection {
     Write-Host "2) Install specific WIM file (Prompt for WIM choice from available WIM files, wipe the disk, install Windows, latest drivers, and then shutdown)"
     Write-Host "3) Show OSDCloud GUI for manual build"
 
-    $Choice = Read-Host "Please select which build you would like to run:"
+    $Choice = Read-Host "Please select which build you would like to run"
 
-    if ($Choice = "1")
+    if ($Choice -eq "1")
         {
             Write-Host "Starting internal build"
             Start-OSDInternal
         }
-    elseif ($Choice = "2")
+    elseif ($Choice -eq "2")
         {
             Write-Host "Starting specific WIM file build"
             Start-OSDWIM
         }
-    elseif ($Choice = "3")
+    elseif ($Choice -eq "3")
         {
             Write-Host "Starting OSDCloud GUI"
             Start-OSDCloudGUI
