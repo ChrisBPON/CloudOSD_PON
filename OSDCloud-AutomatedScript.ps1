@@ -1,5 +1,5 @@
 ## Amend this for internal build script e.g. when newer feature update is released - Might be a way to automate pulling through the latest version
-$WindowsOSVersion = "Windows 11 22H2 x64"
+$WindowsOSVersion = "Windows 10 21H2 x64"
 
 
 function Start-BuildSelection {
