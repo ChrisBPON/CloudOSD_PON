@@ -10,17 +10,17 @@ function Start-BuildSelection {
 
     $Choice = Read-Host "Please select which build you would like to run:"
 
-    if ($Choice = 1)
+    if ($Choice = "1")
         {
             Write-Host "Starting internal build"
             Start-OSDInternal
         }
-    elseif ($Choice = 2)
+    elseif ($Choice = "2")
         {
             Write-Host "Starting specific WIM file build"
             Start-OSDWIM
         }
-    elseif ($Choice = 3)
+    elseif ($Choice = "3")
         {
             Write-Host "Starting OSDCloud GUI"
             Start-OSDCloudGUI
